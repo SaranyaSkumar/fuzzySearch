@@ -13,32 +13,7 @@ const async = require('async')
 const port = process.env.PORT || 5000;
 app.set('port', port);
 
-// request('https://nut-case.s3.amazonaws.com/jobs.json', {}, (err, resp, body) => {
-//         if (err) { return console.log(err); }
-//         if(body)
-//         {
-//             try {
-//                 index.clearIndex((err, content)=>{
-//                     if(err) {console.log("err", err)}
-//                     if(content)
-//                     {
-//                     body= JSON.parse(body);
-//                         async.forEachSeries(body.data, (data, cb)=>{
-//                             index.addObjects([data], function(err, content) {
-//                                 console.log("err", err, content)
-//                                 cb();
-//                             });
-//                         },()=>{
-//                             console.log("sucees")
-//                         })
-//                    }
-//                 })
-//             }
-//             catch (e) {
-//                 console.log("err", e)
-//             }
-//         }
-//     });
+
 
 apiControllers(app);
 
