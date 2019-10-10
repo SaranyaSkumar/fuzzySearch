@@ -212,7 +212,7 @@
             $scope.dataLoading=true;
             if(company)
             {
-                $http.get('/skills', {params: {query: company}}).then(
+                $http.get('/company', {params: {query: company}}).then(
                     function successCallback(res) {
                         $scope.data = res.data;
                         $scope.dataLoading=false;
