@@ -73,7 +73,7 @@ module.exports = function (app, passport) {
             jobData = await getData().catch((err) => {
                 res.json({ message: "something went worng" })
             });
-            let jobData=jobData.data;
+            jobData=jobData.data;
         }
         if (jobData) {
             let results;
@@ -115,7 +115,7 @@ module.exports = function (app, passport) {
             jobData = await getData().catch((err) => {
                 res.json({ message: "something went worng" })
             });
-            let jobData=jobData.data;
+            jobData=jobData.data;
         }
         if (jobData) {
             if(postData.query)
@@ -157,7 +157,7 @@ module.exports = function (app, passport) {
             jobData = await getData().catch((err) => {
                 res.json({ message: "something went worng" })
             });
-            let jobData=jobData.data;
+            jobData=jobData.data;
         }
         if (jobData) {
             if(postData.query)
