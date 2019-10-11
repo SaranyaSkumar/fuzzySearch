@@ -13,8 +13,6 @@ const async = require('async')
 const port = process.env.PORT || 5000;
 app.set('port', port);
 
-
-
 apiControllers(app);
 
 const server = app.listen(port, () => {
