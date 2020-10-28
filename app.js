@@ -10,7 +10,7 @@ var index = client.initIndex('data');
 const async = require('async')
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 app.set('port', port);
 
 apiControllers(app);
