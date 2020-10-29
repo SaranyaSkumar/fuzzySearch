@@ -18,19 +18,20 @@
             <div ng-if="!loading">
                 <h2 style="padding-top: 35px;color: #0c3a63;">Jobs posted</h2>
                 <br><br>
-                <div style=" width: 90%;">
-                    <input style="width: 25%;padding: 14px;
+                <div style=" width: 80%;margin-left: 5%;">
+                    <input style="width: 40%;padding: 14px;
                     border-radius: 6px;" class="dropdown" style="" type="text" name="jobs" placeholder="job title"
                            ng-model="jobs"  name="jobsName" ng-change="search(jobs)" ng-model-options="{debounce: 500}"
                            autocomplete="off">
-                    <input style="width: 25%;padding: 14px;
-                    border-radius: 6px;" ng-change="searchLocation(location)" ng-model="location"
+                    <input style="width: 40%;padding: 14px;
+                    border-radius: 6px;margin-left: 19%;" ng-change="searchLocation(location)" ng-model="location"
                             placeholder="location">
-                    <input style="width: 24%;padding: 14px;
+                            <br><br>
+                    <input style="width: 40%;padding: 14px;
                     border-radius: 6px;" ng-change="searchSkill(skills)" ng-model="skills"
                             placeholder="skills">
-                    <input style="width: 25%;padding: 14px;
-                    border-radius: 6px;" ng-change="searchCompany(company)" ng-model="company"
+                    <input style="width: 40%;padding: 14px;
+                    border-radius: 6px;margin-left: 19%;" ng-change="searchCompany(company)" ng-model="company"
                             placeholder="company name">
                 </div>
                 <md-content>
