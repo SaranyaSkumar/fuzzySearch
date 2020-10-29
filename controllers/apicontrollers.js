@@ -19,7 +19,6 @@ module.exports = function (app, passport) {
         var postData= req.query;
         var jobData;
         if(dataSet && dataSet.length>0) {
-            console.log("data pre")
             jobData= dataSet;
         }
         else {
@@ -62,14 +61,12 @@ module.exports = function (app, passport) {
 
     app.get('/location', async function (req, res) {
         const postData= req.query;
-        console.log("postdata", postData);
         var jobData;
         if(dataSet && dataSet.length>0) {
             console.log("data pre")
             jobData= dataSet;
         }
         else {
-            console.log("fetch fr api")
             jobData = await getData().catch((err) => {
                 res.json({ message: "something went worng" })
             });
@@ -172,7 +169,6 @@ module.exports = function (app, passport) {
                     }
                 };
                 let results = fuzzy.filter(postData.query, jobData, options);
-                //results = results.slice(0, 8);
                 let finalData=[];
                 async.forEachSeries(results, (data, cb) => {
                     finalData.push(data.original)
