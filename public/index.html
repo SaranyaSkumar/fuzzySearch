@@ -40,11 +40,12 @@
                                 <li class="poptest-list" ng-repeat="med in data track by $index " testid="{{ med['title'] }}">
                                     <div style="padding: 7px;
                                         margin: 8px;
-                                        font-size: 15px;" class="poptest-main"><a style="color: black;text-decoration: none;" href={{med.applylink}}>{{ med['title'] }}</a></div>
+                                        font-size: 15px;" class="poptest-main"><a style="color: black;text-decoration: none;text-transform: capitalize;font-size: 20px;" href={{med.applylink}}>{{ med['title'] }}</a></div>
                                     <div style="opacity: 0.8;padding-left: 18px;color: black">
-                                        <span ng-if="med.companyname">{{med.companyname}}</span> <span ng-if="med.experience">|| {{med.experience}}</span> <br><span ng-if="med.location">{{med.location}}</span>
+                                        <span ng-if="med.companyname">{{med.companyname}}</span> <span ng-if="med.experience">|| {{med.experience}}</span> <br>
+                                        <span>{{med.skills}}</span><br>
+                                        <span ng-if="med.location">{{med.location}}</span>
                                     </div>
-                                    {{med}}
                                     <button class="button-style"><a href={{med.applylink}}>Apply</a></button>
                                     <br>
                                 </li>
