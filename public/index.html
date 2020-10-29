@@ -22,7 +22,7 @@
                     <input style="width: 25%;padding: 14px;
                     border-radius: 6px;" class="dropdown" style="" type="text" name="jobs" placeholder="job title"
                            ng-model="jobs"  name="jobsName" ng-change="search(jobs)" ng-model-options="{debounce: 500}"
-                           autocomplete="off" required>
+                           autocomplete="off">
                     <input style="width: 25%;padding: 14px;
                     border-radius: 6px;" ng-change="searchLocation(location)" ng-model="location"
                             placeholder="location">
@@ -44,7 +44,8 @@
                                     <div style="opacity: 0.8;padding-left: 18px;color: black">
                                         <span ng-if="med.companyname">{{med.companyname}}</span> <span ng-if="med.experience">|| {{med.experience}}</span> <br><span ng-if="med.location">{{med.location}}</span>
                                     </div>
-                                    <button class="button-style">Apply</button>
+                                    {{med}}
+                                    <button class="button-style"><a href={{med.applylink}}>Apply</a></button>
                                     <br>
                                 </li>
                             </ul>
